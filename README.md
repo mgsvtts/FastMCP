@@ -66,4 +66,4 @@ You can set your own api key for ``https://api.openweathermap.org`` in ``appsett
 
 ### (Optional) Step 5: Local server
 
-You can use ``dotnet run`` command to run a local server, then you can send JSON RPC requests using tools like Postman
+You can use ``dotnet run --project FastMCP/`` command to run a local server, then you can send JSON RPC requests using tools like Postman
