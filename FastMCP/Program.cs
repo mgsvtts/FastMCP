@@ -2,6 +2,8 @@ using FastMCP.HttpClients.Weather;
 using FastMCP.HttpClients.Weather.Options;
 using FastMCP.Services;
 using FastMCP.HttpClients.Cache;
+using Microsoft.Extensions.Http.Resilience;
+using Polly;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -17,7 +19,16 @@ builder.Services.AddMcpServer()
 
 builder.Services.AddMemoryCache();
 
-builder.Services.AddHttpClient();
+builder.Services.AddHttpClient("default").AddResilienceHandler("retry", x =>
+{
+    x.AddRetry(new HttpRetryStrategyOptions
+    {
+        MaxRetryAttempts = 5,
+        Delay = TimeSpan.FromSeconds(2),
+        BackoffType = DelayBackoffType.Exponential,
+        UseJitter = true,
+    });
+});
 
 builder.Services.AddScoped<IOpenWeatherHttpClient, CachedWeatherHttpClient>();
 builder.Services.AddScoped<OpenWeatherHttpClient>();
