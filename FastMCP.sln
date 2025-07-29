@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FastMCP", "FastMCP\FastMCP.csproj", "{6C579413-8F65-427B-8490-0F050DA2B7FF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FastMCP.Tests", "FastMCP.Tests\FastMCP.Tests.csproj", "{F6A17B82-C1D0-4005-B0E3-D7A897232909}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{443CC32E-3540-4FD7-9DE0-2A552E494009}"
+	ProjectSection(SolutionItems) = preProject
+		docker-compose.yaml = docker-compose.yaml
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6C579413-8F65-427B-8490-0F050DA2B7FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C579413-8F65-427B-8490-0F050DA2B7FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C579413-8F65-427B-8490-0F050DA2B7FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C579413-8F65-427B-8490-0F050DA2B7FF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F6A17B82-C1D0-4005-B0E3-D7A897232909}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F6A17B82-C1D0-4005-B0E3-D7A897232909}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F6A17B82-C1D0-4005-B0E3-D7A897232909}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F6A17B82-C1D0-4005-B0E3-D7A897232909}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
